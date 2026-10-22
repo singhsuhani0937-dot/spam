@@ -1,0 +1,87 @@
+Q17-Build a job-application style form using every input type covered.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Application Form</title>
+</head>
+<body>
+
+    <h1>Job Application Form</h1>
+    <p>Fill the form to apply for Web Developer Job.</p>
+
+    <form>
+        <h2>1. Personal Information</h2>
+
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Suhani" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="suhani@gmail.com" required><br><br>
+
+        <label for="pass">Password:</label><br>
+        <input type="password" id="pass" name="pass" required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="9876543210"><br><br>
+
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <label for="time">Best Time to Contact:</label><br>
+        <input type="time" id="time" name="time"><br><br>
+
+        <label for="month">Available From (Month):</label><br>
+        <input type="month" id="month" name="month"><br><br>
+
+        <label for="week">Available Week:</label><br>
+        <input type="week" id="week" name="week"><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other<br><br>
+
+        <h2>2. Job Details</h2>
+
+        <label for="position">Position Applying For:</label><br>
+        <input type="text" id="position" name="position" value="Web Developer" readonly><br><br>
+
+        <label for="exp">Years of Experience:</label><br>
+        <input type="number" id="exp" name="exp" min="0" max="10" value="1"><br><br>
+
+        <label for="portfolio">Portfolio Website URL:</label><br>
+        <input type="url" id="portfolio" name="portfolio" placeholder="https://myportfolio.com"><br><br>
+
+        <label for="search">Search Job Code:</label><br>
+        <input type="search" id="search" name="search" placeholder="Search..."><br><br>
+
+        <label for="salary">Expected Salary: (Range)</label><br>
+        <input type="range" id="salary" name="salary" min="10000" max="50000"><br><br>
+
+        <label for="color">Favorite Theme Color:</label><br>
+        <input type="color" id="color" name="color" value="#0000ff"><br><br>
+
+        <label>Skills:</label><br>
+        <input type="checkbox" name="skill" value="html"> HTML
+        <input type="checkbox" name="skill" value="css"> CSS
+        <input type="checkbox" name="skill" value="python"> Python
+        <input type="checkbox" name="skill" value="ai"> AI<br><br>
+
+        <label for="resume">Upload Resume:</label><br>
+        <input type="file" id="resume" name="resume"><br><br>
+
+        <label for="msg">Why should we hire you?</label><br>
+        <textarea id="msg" rows="4" cols="35" placeholder="Write in short..."></textarea><br><br>
+
+        <!-- Hidden Input -->
+        <input type="hidden" name="job_id" value="WEB2026">
+
+        <input type="submit" value="Submit Application">
+        <input type="reset" value="Reset">
+        <input type="button" value="Preview" onclick="alert('This is preview')">
+    </form>
+
+</body>
+</html>
