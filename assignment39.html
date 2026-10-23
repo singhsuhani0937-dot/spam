@@ -1,0 +1,13 @@
+Q39-Build a responsive product grid with a header and sidebar using Grid.
+<!DOCTYPE html>
+<html><head><style>
+*{margin:0;box-sizing:border-box}
+.layout{display:grid;grid-template-columns:220px 1fr;grid-template-rows:60px 1fr;min-height:100vh}
+header{grid-column:1/3;background:#1e3a5f;color:white;display:flex;align-items:center;padding:0 20px}
+aside{background:#f0f0f0;padding:20px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;padding:20px}
+.p{background:white;border:1px solid #ddd;padding:15px;border-radius:10px;text-align:center}
+@media(max-width:700px){.layout{grid-template-columns:1fr}header{grid-column:1/2}}
+</style></head><body>
+<div class="layout"><header>My Shop</header><aside>Filters<br>Category<br>Price</aside><div class="products"><div class="p">Product 1</div><div class="p">Product 2</div><div class="p">Product 3</div><div class="p">Product 4</div></div></div>
+</body></html>

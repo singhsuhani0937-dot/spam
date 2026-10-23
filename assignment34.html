@@ -1,0 +1,17 @@
+Q34-Build a responsive Navbar + Hero section using Flexbox.
+<!DOCTYPE html>
+<html><head><style>
+*{margin:0;box-sizing:border-box}
+nav{display:flex;justify-content:space-between;align-items:center;background:#1e3a5f;color:white;padding:15px 30px}
+nav ul{display:flex;list-style:none;gap:20px}
+nav a{color:white;text-decoration:none}
+.hero{display:flex;align-items:center;justify-content:space-between;padding:50px;background:#eef2f7;gap:30px}
+.hero-text{flex:1}
+.hero-text h1{font-size:40px;margin-bottom:15px}
+.hero-text button{background:#c9a86a;border:none;padding:12px 25px;border-radius:20px;margin-top:15px}
+.hero img{flex:1;max-width:450px;border-radius:15px}
+@media(max-width:700px){.hero{flex-direction:column;text-align:center}nav{flex-direction:column;gap:10px}}
+</style></head><body>
+<nav><div>LOGO</div><ul><li><a href="#">Home</a></li><li><a href="#">Shop</a></li><li><a href="#">Contact</a></li></ul></nav>
+<div class="hero"><div class="hero-text"><h1>Welcome to Our Store</h1><p>Best products at best price.</p><button>Shop Now</button></div><img src="https://picsum.photos/500/300"></div>
+</body></html>

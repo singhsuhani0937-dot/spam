@@ -1,0 +1,12 @@
+Q38-Recreate a simple dashboard layout using named grid areas.
+<!DOCTYPE html>
+<html><head><style>
+*{margin:0;box-sizing:border-box}
+.dashboard{display:grid;grid-template-areas:"header header header" "sidebar main main" "footer footer footer";grid-template-columns:200px 1fr 1fr;grid-template-rows:60px 1fr 50px;height:100vh}
+.header{grid-area:header;background:#1e3a5f;color:white;display:flex;align-items:center;padding:0 20px}
+.sidebar{grid-area:sidebar;background:#eef2f7;padding:20px}
+.main{grid-area:main;background:white;padding:20px}
+.footer{grid-area:footer;background:#333;color:white;display:flex;justify-content:center;align-items:center}
+</style></head><body>
+<div class="dashboard"><div class="header">Dashboard Header</div><div class="sidebar">Sidebar<br>Menu 1<br>Menu 2</div><div class="main"><h2>Main Content</h2><p>Dashboard widgets here</p></div><div class="footer">Footer</div></div>
+</body></html>

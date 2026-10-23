@@ -1,0 +1,17 @@
+Q42-Audit and fix responsiveness issues in one earlier project.
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{box-sizing:border-box}
+body{font-family:Arial}
+.container{display:flex; gap:20px; padding:20px}
+.box{flex:1; background:#eef2f7; padding:20px; border-radius:10px}
+img{width:100%; max-width:100%; height:auto; border-radius:10px}
+/* FIXES: overflow hidden, flex-wrap, img max-width */
+@media(max-width:700px){.container{flex-direction:column}}
+</style></head><body>
+<div class="container">
+<div class="box"><img src="https://picsum.photos/400/200"><h3>Fixed Box 1</h3><p>No overflow, image responsive</p></div>
+<div class="box"><img src="https://picsum.photos/400/201"><h3>Fixed Box 2</h3><p>Mobile me column ban jayega</p></div>
+</div>
+</body></html>

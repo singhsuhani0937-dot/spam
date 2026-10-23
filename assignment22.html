@@ -1,0 +1,85 @@
+Q22-Style a page using at least four different selector types correctly.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Q22 - CSS Selectors</title>
+<style>
+  /* 1. Element Selector */
+  h1 {
+    color: #2c3e50;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* 2. Class Selector */
+  .highlight {
+    background-color: yellow;
+    padding: 5px;
+  }
+
+  .card {
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+  }
+
+  /* 3. ID Selector */
+  #main-title {
+    color: #e74c3c;
+    text-transform: uppercase;
+  }
+
+  #special {
+    background-color: #f0f0f0;
+    border-left: 5px solid green;
+    padding: 10px;
+  }
+
+  /* 4. Universal Selector */
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  /* 5. Descendant Selector - Bonus 5th type */
+  div p {
+    color: #333;
+  }
+
+  /* 6. Attribute + Pseudo-class Selector - Bonus */
+  input[type="text"] {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+
+  a:hover {
+    color: red;
+  }
+</style>
+</head>
+<body>
+
+  <h1 id="main-title">My Styled Page - Q22</h1>
+
+  <div class="card">
+    <p>This is styled by <span class="highlight">Element + Class Selector</span>.</p>
+    <p id="special">This paragraph uses ID selector.</p>
+  </div>
+
+  <div class="card">
+    <p>Universal selector ne sabka margin zero kar diya hai.</p>
+    <input type="text" placeholder="Type here">
+    <br><br>
+    <a href="#">Hover me</a>
+  </div>
+
+</body>
+</html>

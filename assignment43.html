@@ -1,0 +1,16 @@
+Q43- Recreate a simple reference landing page using both Grid and Flexbox appropriately.
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{margin:0; box-sizing:border-box}
+nav{display:flex; justify-content:space-between; align-items:center; background:#1e3a5f; color:white; padding:15px 30px}
+.hero{display:flex; align-items:center; justify-content:space-between; padding:50px; background:#eef2f7; gap:20px}
+.hero img{width:400px; max-width:100%; border-radius:12px}
+.features{display:grid; grid-template-columns:repeat(3,1fr); gap:15px; padding:30px}
+.f{background:white; border:1px solid #ddd; padding:20px; border-radius:10px; text-align:center}
+@media(max-width:700px){.hero{flex-direction:column; text-align:center}.features{grid-template-columns:1fr}}
+</style></head><body>
+<nav><b>MyShop</b><div>Home | Products | Contact</div></nav>
+<div class="hero"><div><h1>Best Landing Page</h1><p>Flex for Nav & Hero, Grid for Features</p></div><img src="https://picsum.photos/400/250"></div>
+<div class="features"><div class="f">🚀 Fast</div><div class="f">💎 Premium</div><div class="f">🔒 Secure</div></div>
+</body></html>

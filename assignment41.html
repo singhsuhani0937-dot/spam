@@ -1,0 +1,24 @@
+q41-Add at least two breakpoints to an earlier project and test on multiple screen sizes.
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* { box-sizing:border-box; margin:0; }
+.grid { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; padding:20px; }
+.card { background:#1e3a5f; color:white; padding:40px; text-align:center; border-radius:10px; }
+
+/* Breakpoint 1 - Tablet 1024px */
+@media (max-width:1024px) {
+  .grid { grid-template-columns:repeat(2,1fr); }
+  .card { background:#c9a86a; }
+}
+
+/* Breakpoint 2 - Mobile 600px */
+@media (max-width:600px) {
+  .grid { grid-template-columns:1fr; }
+  .card { background:#e91e63; font-size:18px; }
+}
+</style></head><body>
+<h2 style="text-align:center; padding:20px;">Q41 - Responsive Test - Resize to Check</h2>
+<div class="grid"><div class="card">Card 1</div><div class="card">Card 2</div><div class="card">Card 3</div><div class="card">Card 4</div></div>
+<p style="text-align:center;">Desktop: 4 col | Tablet: 2 col | Mobile: 1 col</p>
+</body></html>

@@ -1,0 +1,98 @@
+Q35-Submit the finished Flexbox landing-page section.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q35 - Flexbox Landing Page</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: Arial, sans-serif; background:#f7f5f0; }
+
+/* Q31 - NAVBAR */
+nav { display:flex; justify-content:space-between; align-items:center; background:#1e3a5f; color:white; padding:15px 30px; flex-wrap:wrap; }
+.logo { font-size:22px; font-weight:bold; }
+.links { display:flex; gap:25px; list-style:none; }
+.links a { color:white; text-decoration:none; }
+.links a:hover { color:#c9a86a; }
+
+/* Q34 - HERO */
+.hero { display:flex; align-items:center; justify-content:space-between; gap:30px; padding:50px 30px; background:#eef2f7; }
+.hero-text { flex:1; }
+.hero-text h1 { font-size:42px; color:#1e3a5f; margin-bottom:15px; }
+.hero-text p { color:#555; font-size:17px; }
+.hero-text button { background:#c9a86a; color:white; border:none; padding:12px 28px; border-radius:25px; margin-top:20px; font-size:16px; cursor:pointer; }
+.hero-img { flex:1; }
+.hero-img img { width:100%; max-width:500px; border-radius:15px; }
+
+/* Q33 - PRODUCT LISTING */
+.section-title { text-align:center; margin:40px 0 20px; color:#1e3a5f; font-size:28px; }
+.products { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; padding:0 20px 40px; }
+.product { width:220px; background:white; padding:15px; border-radius:12px; box-shadow:0 3px 12px rgba(0,0,0,0.1); text-align:center; }
+.product img { width:100%; border-radius:8px; }
+.product h3 { margin:10px 0 5px; }
+.product button { background:#1e3a5f; color:white; border:none; padding:8px 18px; border-radius:5px; margin-top:10px; cursor:pointer; }
+
+/* Q32 - LOGIN FORM CENTERED */
+.login-section { display:flex; justify-content:center; align-items:center; padding:40px 20px; }
+.login-form { background:white; padding:30px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.1); width:320px; display:flex; flex-direction:column; gap:15px; }
+.login-form h2 { text-align:center; color:#1e3a5f; }
+.login-form input { padding:12px; border:1px solid #ddd; border-radius:5px; }
+.login-form button { background:#1e3a5f; color:white; padding:12px; border:none; border-radius:5px; cursor:pointer; }
+
+footer { background:#1e3a5f; color:white; text-align:center; padding:15px; }
+
+@media (max-width:700px) {
+  .hero { flex-direction:column; text-align:center; }
+  nav { flex-direction:column; gap:10px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">MyShop</div>
+  <ul class="links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
+    <h1>Welcome to MyShop</h1>
+    <p>Best products at best price. Flexbox se banaya hua responsive landing page.</p>
+    <button>Shop Now</button>
+  </div>
+  <div class="hero-img">
+    <img src="https://picsum.photos/500/300">
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<h2 class="section-title">Our Products</h2>
+<div class="products">
+  <div class="product"><img src="https://picsum.photos/200/150?1"><h3>Product 1</h3><p>₹499</p><button>Add to Cart</button></div>
+  <div class="product"><img src="https://picsum.photos/200/150?2"><h3>Product 2</h3><p>₹699</p><button>Add to Cart</button></div>
+  <div class="product"><img src="https://picsum.photos/200/150?3"><h3>Product 3</h3><p>₹899</p><button>Add to Cart</button></div>
+  <div class="product"><img src="https://picsum.photos/200/150?4"><h3>Product 4</h3><p>₹999</p><button>Add to Cart</button></div>
+</div>
+
+<!-- LOGIN -->
+<div class="login-section">
+  <form class="login-form">
+    <h2>Login</h2>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
+  </form>
+</div>
+
+<footer>© 2026 MyShop - Flexbox Landing Page - Q35 Completed</footer>
+
+</body>
+</html>

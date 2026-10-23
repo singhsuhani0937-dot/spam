@@ -1,0 +1,118 @@
+Q26- Annotate a screenshot explaining the box model of one of your own elements.
+he CSS Box Model is a fundamental concept in CSS. Every HTML element is treated as a rectangular box. Each box consists of 4
+ layers from inside to outside:
+1- Content - The actual content like text or image. Its size is controlled by width and height property.
+2. Padding - The space between the Content and the Border. It is the inner space, transparent and inside the border.
+3. Border - A line that surrounds the padding and content. It can be set with border: width style color.
+4. Margin - The space outside the border. It separates the element from other elements.Formula:
+Total Width = Width + Left Padding + Right Padding + Left Border + Right Border + Left Margin + Right MarginExample: If width:
+ 200px, padding: 20px, border: 5px, margin: 10px then Total Width = 200 + 20 + 20 + 5 + 5 + 10 + 10 = 270pxBy using box-sizing:
+  border-box, padding and border are included inside the width, which makes the layout easy to control and prevents overflow
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q26 - CSS Box Model</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+body { background:#f4f6f8; padding:20px; }
+
+h1 { text-align:center; color:#1e3a5f; margin-bottom:5px; }
+.sub { text-align:center; color:#666; margin-bottom:25px; }
+
+/* Theory Box */
+.theory {
+  max-width:800px; margin:0 auto 30px; background:white;
+  padding:25px; border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,0.1);
+  border-left:6px solid #1e3a5f;
+}
+.theory p { line-height:1.7; color:#333; margin-bottom:12px; }
+.theory b { color:#1e3a5f; }
+.formula { background:#eef2f7; padding:12px; border-radius:8px; text-align:center; font-weight:bold; color:#e91e63; margin-top:10px; }
+
+/* 4 Layers Explanation */
+.layers { display:flex; gap:12px; max-width:800px; margin:0 auto 30px; flex-wrap:wrap; }
+.layer { flex:1; min-width:150px; padding:15px; border-radius:10px; text-align:center; color:white; }
+.c1 { background:#2ecc71; } /* Content */
+.c2 { background:#3498db; } /* Padding */
+.c3 { background:#e74c3c; } /* Border */
+.c4 { background:#f39c12; } /* Margin */
+.layer h3 { margin-bottom:5px; }
+.layer p { font-size:13px; }
+
+/* Live Box Model Demo - Annotated */
+.demo-wrap { text-align:center; }
+.demo-wrap h2 { color:#1e3a5f; margin-bottom:15px; }
+
+.margin-box {
+  background:#FFF3CD; /* Margin Color */
+  border:2px dashed #f39c12;
+  padding:35px; max-width:550px; margin:0 auto;
+  border-radius:12px;
+}
+.margin-box span { color:#b77900; font-weight:bold; font-size:13px; }
+
+.border-box {
+  background:#1e3a5f;
+  padding:18px; border-radius:8px;
+}
+.border-box span { color:white; font-weight:bold; font-size:13px; }
+
+.padding-box {
+  background:#c9e7ff;
+  padding:28px; border-radius:6px;
+}
+.padding-box span { color:#1e3a5f; font-weight:bold; font-size:13px; }
+
+.content-box {
+  background:white; padding:20px; border-radius:6px;
+}
+.content-box h3 { color:#1e3a5f; }
+.content-box p { color:#555; font-size:14px; margin-top:5px; }
+
+.note { max-width:800px; margin:20px auto; text-align:center; color:#555; font-size:14px; line-height:1.6; }
+</style>
+</head>
+<body>
+
+<h1>Q26 - CSS Box Model</h1>
+<p class="sub">Annotate a screenshot explaining the box model of one of your own elements</p>
+
+<div class="theory">
+  <p><b>The CSS Box Model</b> is a fundamental concept in CSS. Every HTML element is treated as a rectangular box. Each box consists of <b>4 layers</b> from inside to outside:</p>
+  <p><b>1. Content:</b> The actual content like text or image. Its size is controlled by <b>width</b> and <b>height</b>.</p>
+  <p><b>2. Padding:</b> Space between Content and Border. Inner space inside border.</p>
+  <p><b>3. Border:</b> A line that surrounds padding and content.</p>
+  <p><b>4. Margin:</b> Space outside the border. Separates element from other elements.</p>
+  <div class="formula">Formula: Total Width = Content + Padding + Border + Margin<br>Example: 200 + 20+20 + 5+5 + 10+10 = 270px</div>
+  <p style="margin-top:12px"><b>box-sizing: border-box</b> - Padding and Border included inside width, layout does not break.</p>
+</div>
+
+<div class="layers">
+  <div class="layer c1"><h3>CONTENT</h3><p>Text / Image<br>300px</p></div>
+  <div class="layer c2"><h3>PADDING</h3><p>30px<br>Inner Gap</p></div>
+  <div class="layer c3"><h3>BORDER</h3><p>8px Solid<br>Outer Line</p></div>
+  <div class="layer c4"><h3>MARGIN</h3><p>40px<br>Outside Space</p></div>
+</div>
+
+<div class="demo-wrap">
+  <h2>Live Annotated Example</h2>
+  <div class="margin-box">
+    <span>⬆ MARGIN: 40px - Outside Space</span>
+    <div class="border-box">
+      <span>BORDER: 8px Solid Blue</span>
+      <div class="padding-box">
+        <span>PADDING: 30px - Inner Gap</span>
+        <div class="content-box">
+          <h3>CONTENT - 300px</h3>
+          <p>This is Content Area</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="note">Yellow = Margin &nbsp; | &nbsp; Dark Blue = Border &nbsp; | &nbsp; Light Blue = Padding &nbsp; | &nbsp; White = Content</p>
+</div>
+
+</body>
+</html>

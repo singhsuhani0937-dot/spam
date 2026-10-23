@@ -1,0 +1,11 @@
+Q32-Create a perfectly centred login-form layout using Flexbox.
+<!DOCTYPE html>
+<html><head><style>
+* {margin:0; padding:0; box-sizing:border-box;}
+body{height:100vh; display:flex; justify-content:center; align-items:center; background:#f7f5f0;}
+.form{background:white; padding:30px; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.1); width:300px; display:flex; flex-direction:column; gap:15px;}
+.form input{padding:10px; border:1px solid #ddd; border-radius:5px;}
+.form button{background:#1e3a5f; color:white; padding:10px; border:none; border-radius:5px;}
+</style></head><body>
+<form class="form"><h2 style="text-align:center">Login</h2><input type="email" placeholder="Email"><input type="password" placeholder="Password"><button>Login</button></form>
+</body></html>

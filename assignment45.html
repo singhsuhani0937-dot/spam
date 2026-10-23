@@ -1,0 +1,54 @@
+Q45-Submit the finished, fully responsive landing-page project.
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q45 Final Project</title>
+<style>
+*{margin:0; box-sizing:border-box; font-family:Arial}
+nav{display:flex; justify-content:space-between; align-items:center; background:#1e3a5f; color:white; padding:15px 30px}
+nav ul{display:flex; list-style:none; gap:20px}
+.hero{display:flex; align-items:center; justify-content:space-between; padding:50px 30px; background:linear-gradient(135deg,#eef2f7,#dbeafe); gap:20px}
+.hero-text{flex:1}
+.hero-text h1{font-size:38px; color:#1e3a5f}
+.hero-text p{margin:12px 0; color:#555}
+.hero-text button{background:#e91e63; color:white; border:none; padding:12px 28px; border-radius:25px; font-size:16px; margin-top:10px}
+.hero img{flex:1; max-width:480px; width:100%; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.2)}
+.products{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; padding:30px; background:#f7f5f0}
+.p{background:white; border-radius:15px; overflow:hidden; text-align:center; box-shadow:0 3px 12px rgba(0,0,0,0.1); padding-bottom:15px; transition:0.3s}
+.p:hover{transform:scale(1.03)}
+.p img{width:100%; height:170px; object-fit:cover}
+.p h3{margin:12px 0 3px}
+.p .desc{color:#888; font-size:13px}
+.p .price{color:#e91e63; font-weight:bold; font-size:18px; margin:8px 0}
+.p button{background:#1e3a5f; color:white; border:none; padding:8px 20px; border-radius:20px; cursor:pointer}
+footer{background:#1e3a5f; color:white; text-align:center; padding:15px}
+@media(max-width:1024px){.products{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){nav{flex-direction:column; gap:10px}.hero{flex-direction:column; text-align:center}.products{grid-template-columns:1fr}}
+</style></head><body>
+
+<nav><b>✦ MyShop</b><ul><li>Home</li><li>Shop</li><li>Contact</li></ul></nav>
+
+<div class="hero">
+  <div class="hero-text"><h1>Premium Collection 2026</h1><p>Best Products, Best Price. Fully Responsive Landing Page - Grid + Flexbox.</p><button>Shop Now</button></div>
+  <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80">
+</div>
+
+<div class="products">
+  <div class="p"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80"><h3>Wireless Headphones</h3><p class="desc">Premium Sound • Bluetooth</p><div class="price">₹1,999 <span style="text-decoration:line-through; color:#999; font-size:14px">₹2,999</span></div><button>Add to Cart</button></div>
+
+  <div class="p"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80"><h3>Smart Watch Pro</h3><p class="desc">Fitness • AMOLED Display</p><div class="price">₹2,499 <span style="text-decoration:line-through; color:#999; font-size:14px">₹3,499</span></div><button>Add to Cart</button></div>
+
+  <div class="p"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80"><h3>Nike Running Shoes</h3><p class="desc">Comfort • Lightweight</p><div class="price">₹1,499 <span style="text-decoration:line-through; color:#999; font-size:14px">₹2,499</span></div><button>Add to Cart</button></div>
+
+  <div class="p"><img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80"><h3>Leather Handbag</h3><p class="desc">Premium Leather • Trendy</p><div class="price">₹2,299 <span style="text-decoration:line-through; color:#999; font-size:14px">₹3,199</span></div><button>Add to Cart</button></div>
+
+  <div class="p"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&q=80"><h3>Stylish Sunglasses</h3><p class="desc">UV Protection • Fashion</p><div class="price">₹999 <span style="text-decoration:line-through; color:#999; font-size:14px">₹1,499</span></div><button>Add to Cart</button></div>
+
+  <div class="p"><img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80"><h3>Luxury Perfume</h3><p class="desc">Long Lasting Fragrance</p><div class="price">₹1,299 <span style="text-decoration:line-through; color:#999; font-size:14px">₹1,999</span></div><button>Add to Cart</button></div>
+
+  <div class="p"><img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=600&q=80"><h3>Wireless Earbuds</h3><p class="desc">Noise Cancellation</p><div class="price">₹1,199 <span style="text-decoration:line-through; color:#999; font-size:14px">₹1,999</span></div><button>Add to Cart</button></div>
+
+  <div class="p"><img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=80"><h3>Classic Watch</h3><p class="desc">Elegant • Waterproof</p><div class="price">₹3,999 <span style="text-decoration:line-through; color:#999; font-size:14px">₹5,999</span></div><button>Add to Cart</button></div>
+</div>
+
+<footer>© 2026 MyShop - Q45 Finished Fully Responsive Project</footer>
+</body></html>

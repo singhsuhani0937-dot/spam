@@ -1,0 +1,12 @@
+Q31-Create a simple responsive menu bar using display:flex
+<!DOCTYPE html>
+<html><head><style>
+* {margin:0; padding:0; box-sizing:border-box;}
+nav {display:flex; justify-content:space-between; align-items:center; background:#1e3a5f; color:white; padding:15px 30px; flex-wrap:wrap;}
+.logo{font-weight:bold; font-size:20px;}
+.links{display:flex; gap:20px; list-style:none;}
+.links a{color:white; text-decoration:none;}
+@media (max-width:600px){ nav{flex-direction:column; gap:10px;} }
+</style></head><body>
+<nav><div class="logo">MySite</div><ul class="links"><li><a href="#">Home</a></li><li><a href="#">About</a></li><li><a href="#">Contact</a></li></ul></nav>
+</body></html>

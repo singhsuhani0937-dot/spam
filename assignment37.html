@@ -1,0 +1,51 @@
+Q37-Build a responsive product grid that reflows automatically.
+<!DOCTYPE html>
+<html><head><style>
+*{box-sizing:border-box; margin:0; padding:0;}
+body{font-family:Arial, sans-serif; background:#f7f5f0; padding:20px;}
+h1{text-align:center; color:#1e3a5f; margin-bottom:20px;}
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;}
+.card{background:white; border-radius:15px; overflow:hidden; box-shadow:0 3px 12px rgba(0,0,0,0.1); text-align:center; padding-bottom:15px;}
+.card img{width:100%; height:180px; object-fit:cover;}
+.card h3{margin:12px 0 5px;}
+.card p{color:#888; font-size:14px;}
+.price{color:#e91e63; font-weight:bold; font-size:18px; margin:8px 0;}
+.card button{background:#1e3a5f; color:white; border:none; padding:8px 20px; border-radius:20px; cursor:pointer;}
+.card button:hover{background:#c9a86a;}
+</style></head><body>
+
+<h1>Our Best Products</h1>
+
+<div class="grid">
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80" alt="Headphone">
+    <h3>Wireless Headphones</h3><p>Premium Sound</p><div class="price">₹1,999</div><button>Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80" alt="Watch">
+    <h3>Smart Watch</h3><p>Stylish & Smart</p><div class="price">₹2,499</div><button>Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80" alt="Shoes">
+    <h3>Running Shoes</h3><p>Comfort Fit</p><div class="price">₹1,499</div><button>Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=80" alt="Smart Watch Black">
+    <h3>Classic Watch</h3><p>Elegant Design</p><div class="price">₹3,999</div><button>Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&q=80" alt="Sunglasses">
+    <h3>Cool Sunglasses</h3><p>UV Protection</p><div class="price">₹999</div><button>Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80" alt="Hand Bag">
+    <h3>Leather Handbag</h3><p>Premium Leather</p><div class="price">₹2,299</div><button>Add to Cart</button>
+  </div>
+</div>
+
+</body></html>

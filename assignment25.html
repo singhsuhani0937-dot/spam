@@ -1,0 +1,105 @@
+Q25- Submit the styled multi-page project with a short note on design choices. Module 6: Box Model & Positioning
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Q25 - Final Styled Multi-Page Project</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1e3a5f;
+    --accent: #c9a86a;
+    --bg: #f7f5f0;
+    --card: #ffffff;
+    --text: #2d2d2d;
+  }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); }
+
+  header {
+    background: var(--primary);
+    color: white;
+    padding: 30px;
+    text-align: center;
+  }
+  header h1 { font-family: 'Playfair Display', serif; font-size: 32px; }
+  header p { opacity: 0.9; margin-top: 8px; }
+
+  nav {
+    background: white;
+    display: flex; justify-content: center; gap: 20px;
+    padding: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky; top: 0;
+  }
+  nav a { text-decoration: none; color: var(--primary); font-weight: 600; }
+
+  .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 4px solid var(--accent);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .card h3 { color: var(--primary); font-family: 'Playfair Display', serif; }
+  .card p { font-size: 14px; margin: 8px 0; color: #555; }
+  .card a { color: var(--primary); font-weight: 600; font-size: 14px; }
+
+  .note {
+    background: #fff8e6;
+    border-left: 5px solid var(--accent);
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+  }
+  .note h2 { font-family: 'Playfair Display', serif; color: var(--primary); margin-bottom: 10px; }
+  .note ul { margin-left: 20px; line-height: 1.7; font-size: 14px; }
+
+  footer { text-align: center; padding: 20px; color: #888; font-size: 13px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>My Styled Multi-Page Project</h1>
+  <p>HTML & CSS - Module 1 to 5 - Final Submission</p>
+</header>
+
+<nav>
+  <a href="assignment20.html">Q20</a>
+  <a href="assignment21.html">Q21</a>
+  <a href="assignment22.html">Q22</a>
+  <a href="assignment23.html">Q23</a>
+  <a href="assignment24.html">Q24</a>
+</nav>
+
+<div class="container">
+  <div class="grid">
+    <div class="card"><h3>Q20 - Multi-Page Website</h3><p>Home, About, Contact pages linked together.</p><a href="assignment20.html">View Page →</a></div>
+    <div class="card"><h3>Q21 - Styled Table</h3><p>CSS styling with borders, hover, striped rows.</p><a href="assignment21.html">View Page →</a></div>
+    <div class="card"><h3>Q22 - CSS Selectors</h3><p>Element, Class, ID, Universal selectors demo.</p><a href="assignment22.html">View Page →</a></div>
+    <div class="card"><h3>Q23 - Resume Restyle</h3><p>Resume with font pairing & colour palette.</p><a href="assignment23.html">View Page →</a></div>
+  </div>
+
+  <div class="note">
+    <h2>Design Choices - Short Note</h2>
+    <ul>
+      <li><b>Font Pairing:</b> Headings ke liye <i>Playfair Display</i> (Serif - elegant) aur Body ke liye <i>Inter</i> (Sans-serif - readable) use kiya.</li>
+      <li><b>Colour Palette:</b> Primary <b>#1e3a5f Navy Blue</b> for trust, Accent <b>#c9a86a Gold</b> for highlight, Background <b>#f7f5f0 Off-white</b> for comfort.</li>
+      <li><b>CSS Variables:</b> Saare colours aur sizes ko <code>:root</code> me tokens banake use kiya, jisse future me ek jagah change karne se pura site update ho jaye.</li>
+      <li><b>Consistency:</b> Saare pages me same header, same spacing aur same card design rakha hai, taaki project professional lage.</li>
+      <li><b>Responsiveness:</b> Grid layout use kiya hai jo mobile aur desktop dono par achha dikhta hai.</li>
+    </ul>
+  </div>
+</div>
+
+<footer>Submitted by Vaishnavi | Final Project - Q25</footer>
+
+</body>
+</html>
